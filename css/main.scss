@@ -1,0 +1,365 @@
+//body
+body {
+    margin: -5px;
+    width: 100%;
+}
+
+//wrapper
+.wrapper {
+    @include wrapper();
+}
+
+.wrapperTop {
+    @include wrapper(1000px, 160px);
+}
+
+.wrapperSmall {
+    @include wrapper(600px);
+}
+
+.wrapperSmallTop {
+    @include wrapper(600px, 160px);
+}
+
+//aligning
+.verticalCentered {
+    @include verticalCentered();
+}
+
+.centerItem {
+    @include centerItem();
+}
+
+.txtCenter {
+    @include txtAlign();
+}
+
+.txtLeft {
+    @include txtAlign(left);
+}
+
+.txtRight {
+    @include txtAlign(right);
+}
+
+.alignLeft {
+    @include alignLeft();
+}
+
+//links
+.link {
+    @include link();
+}
+
+.link:hover {
+    @include linkHover();
+}
+
+.linkHoverColorGreen:hover {
+    @include linkHover($primaryColor);
+}
+
+.linkNoUnderline {
+    text-decoration: none;
+}
+
+.linkUnderline {
+    @include linkUnderline();
+}
+
+//primary btn
+.primaryBtn {
+    @include btn();
+}
+
+.primaryBtn:hover {
+    @include btnHover();
+}
+
+//secondary btn
+.secondaryBtn {
+    @include btn(2px solid $primaryColor, 5px, $transparent, $primaryColor, 10px 20px, $primaryFont, 0.3s, none, pointer, none, 16px);
+}
+
+.secondaryBtn:hover {
+    @include btnHover($primaryColor, $white);
+}
+
+//secondary btn
+.disabledSecondaryBtn {
+    @include btn(2px solid $primaryDisabledColor, 5px, $transparent, $primaryDisabledColor, 10px 20px, $primaryFont, 0.3s, none, not-allowed, none, 16px);
+}
+
+//title
+.title {
+    @include title();
+}
+
+//txt
+.txt {
+    @include txt();
+}
+
+.txtColorRed {
+    @include txt($color: $red);
+}
+
+.txtColorGreen {
+    @include txt($color: $primaryColor);
+}
+
+//sub title
+.subTitle {
+    @include subTitle();
+}
+
+//promotion banner
+.promotionBanner{
+    @include promotionBanner(url("../img/promotionBanner/amdRyzen5000.png"));
+}
+
+.promotionBannerBlockBottomCenter{
+    @include promotionBannerBlockBottomCenter();
+}
+
+//comparision
+.comparision {
+    @include comparision();
+}
+
+.comparisionColumn {
+    @include comparisionColumn();
+}
+
+.comparisionColumn:hover {
+    @include comparisionColumnHover();
+}
+
+.comparisionPopularTag {
+    @include comparisionPopularTag();
+}
+
+.comparisionSpec {
+    @include comparisionSpec();
+}
+
+.comparisionBtn {
+    @include comparisionBtn();
+}
+
+//promotionTiles
+.promotionTiles {
+    @include promotionTiles();
+}
+
+//tiles
+.tile {
+    @include tile();
+}
+
+.tile130 {
+    @include tile(130px);
+}
+
+.tileHover:hover {
+    @include tileHover();
+}
+
+.tileImg {
+    @include tileImg();
+}
+
+//form
+.form50 {
+    @include form(50%);
+}
+
+//input
+.inputField {
+    @include inputField();
+}
+
+.inputField:focus {
+    @include inputFieldFocus();
+}
+
+//checkbox
+.checkboxContainer {
+    @include checkboxContainer();
+}
+
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkboxCheckmark {
+    @include checkboxCheckmark();
+}
+
+.checkboxContainer input:checked ~ .checkboxCheckmark {
+    background-color: $primaryColor;
+}
+
+.checkboxCheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxContainer input:checked ~ .checkboxCheckmark:after {
+    display: block;
+}
+
+.checkboxContainer .checkboxCheckmark:after {
+    left: 7.5px;
+    top: 2px;
+    width: 7.5px;
+    height: 15px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+//tabs
+.tabs {
+    @include tabs();
+}
+
+.tabLink {
+    @include tabLink();
+}
+
+.tabLink:hover {
+    @include tabLinkHover();
+}
+
+.active {
+    @include tabLinkActive();
+}
+
+.tabContent {
+    @include tabContent();
+}
+
+//table
+.table {
+    border: 2px solid $secondaryColor;
+    border-collapse: collapse;
+}
+
+.tableHead, .tableCell {
+    border: 1px solid $secondaryColor;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+//rule
+.rule {
+    @include rule();
+}
+
+//line through
+.lineThrough {
+    @include lineThrough();
+}
+
+//column
+.column50 {
+    @include column();
+}
+
+.column20 {
+    @include column(20%);
+}
+
+.column80Right {
+    @include column(80%, right);
+}
+
+.column14 {
+    @include column(14%);
+}
+
+//width
+.width70 {
+    @include width(70%);
+}
+
+.width20 {
+    @include width(20%);
+}
+
+.width55 {
+    @include width(55%);
+}
+
+.width50 {
+    @include width(50%);
+}
+
+//height
+.height100px {
+    @include height(100px);
+}
+
+//margin
+.marginTop500 {
+    @include margin(500px);
+}
+
+.marginTop250 {
+    @include margin(250px);
+}
+
+.margin0 {
+    @include margin(0%, 0%, 0%, 0%);
+}
+
+.margin0auto {
+    @include margin(0%, auto, 0%, auto);
+}
+
+.margin10 {
+    @include margin(10px, 10px, 10px, 10px);
+}
+
+//display
+.displayBlock {
+    @include display(block);
+}
+
+//review
+.review {
+    @include review();
+}
+
+//border
+.borderSecondary {
+    @include border(2px solid $secondaryColor);
+}
+
+//slider
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: $secondaryColor;
+    outline: none;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $primaryColor;
+    cursor: pointer;
+}

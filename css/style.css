@@ -1,0 +1,622 @@
+body {
+  margin: -5px;
+  width: 100%;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 0px;
+}
+
+.wrapperTop {
+  width: 1000px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 160px;
+}
+
+.wrapperSmall {
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 0px;
+}
+
+.wrapperSmallTop {
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 160px;
+}
+
+.verticalCentered {
+  vertical-align: middle;
+}
+
+.centerItem {
+  margin: 0 auto;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.txtCenter {
+  text-align: center;
+}
+
+.txtLeft {
+  text-align: left;
+}
+
+.txtRight {
+  text-align: right;
+}
+
+.alignLeft {
+  margin-left: 0px !important;
+}
+
+.link {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: inherit;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.linkHoverColorGreen:hover {
+  color: #53a200;
+}
+
+.linkNoUnderline {
+  text-decoration: none;
+}
+
+.linkUnderline {
+  text-decoration: underline;
+}
+
+.primaryBtn {
+  border: 2px solid #53a200;
+  border-radius: 5px;
+  background-color: #53a200;
+  color: white;
+  padding: 10px 20px;
+  font-family: "DM Sans", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
+
+.primaryBtn:hover {
+  background-color: transparent;
+  color: #53a200;
+}
+
+.secondaryBtn {
+  border: 2px solid #53a200;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #53a200;
+  padding: 10px 20px;
+  font-family: "DM Sans", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
+
+.secondaryBtn:hover {
+  background-color: #53a200;
+  color: white;
+}
+
+.disabledSecondaryBtn {
+  border: 2px solid rgba(83, 162, 0, 0.5);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(83, 162, 0, 0.5);
+  padding: 10px 20px;
+  font-family: "DM Sans", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: not-allowed;
+  outline: none;
+  font-size: 16px;
+}
+
+.title {
+  color: #53a200;
+  font-family: "DM Sans", sans-serif;
+}
+
+.txt {
+  color: black !important;
+  font-family: "Roboto", sans-serif;
+}
+
+.txtColorRed {
+  color: red !important;
+  font-family: "Roboto", sans-serif;
+}
+
+.txtColorGreen {
+  color: #53a200 !important;
+  font-family: "Roboto", sans-serif;
+}
+
+.subTitle {
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
+
+.promotionBanner {
+  background-image: url("../img/promotionBanner/amdRyzen5000.png");
+  padding-top: 200px;
+  height: 500px;
+  background-size: contain;
+  background-position: center;
+}
+
+.promotionBannerBlockBottomCenter {
+  background-color: white;
+  border: 2px solid #53a200;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 340px;
+  padding: 30px;
+  width: 900px;
+}
+
+.comparision {
+  margin-top: 200px;
+}
+
+.comparisionColumn {
+  float: left;
+  width: 206px;
+  margin: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.comparisionColumn:hover {
+  -webkit-box-shadow: 3px 5px 15px black;
+          box-shadow: 3px 5px 15px black;
+}
+
+.comparisionPopularTag {
+  padding: 10px 15px;
+  background-color: #53a200;
+  color: white !important;
+  border-radius: 5px;
+}
+
+.comparisionSpec {
+  padding: 10px 15px;
+  border-bottom: 1px solid lightgrey;
+  border-top: none;
+  margin: 0px;
+}
+
+.comparisionBtn {
+  margin: 10px auto;
+}
+
+.promotionTiles {
+  margin-top: 750px;
+}
+
+.tile {
+  height: initial;
+  float: left;
+  width: 269.3px;
+  margin: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tile130 {
+  height: 130px;
+  float: left;
+  width: 269.3px;
+  margin: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tileHover:hover {
+  -webkit-box-shadow: 3px 5px 15px black;
+          box-shadow: 3px 5px 15px black;
+}
+
+.tileImg {
+  max-height: 140px;
+  max-width: 100%;
+  width: initial;
+}
+
+.form50 {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+}
+
+.inputField {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  display: block;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  resize: vertical;
+}
+
+.inputField:focus {
+  border-color: #53a200;
+}
+
+.checkboxContainer {
+  padding-left: 80px;
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxCheckmark {
+  position: absolute;
+  left: 40px;
+  top: -5px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 2px solid #53a200;
+  border-radius: 5px;
+}
+
+.checkboxContainer input:checked ~ .checkboxCheckmark {
+  background-color: #53a200;
+}
+
+.checkboxCheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .checkboxCheckmark:after {
+  display: block;
+}
+
+.checkboxContainer .checkboxCheckmark:after {
+  left: 7.5px;
+  top: 2px;
+  width: 7.5px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tabs {
+  overflow: hidden;
+}
+
+.tabLink {
+  background-color: white;
+  float: left;
+  border: 2px solid #53a200;
+  border-radius: 5px 5px 0px 0px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 16px;
+  color: #53a200;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  border-bottom: none;
+}
+
+.tabLink:hover {
+  background-color: #53a200;
+  color: white;
+}
+
+.active {
+  background-color: #53a200;
+  color: white;
+}
+
+.tabContent {
+  display: none;
+  padding: 20px;
+  border: 2px solid #53a200;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.table {
+  border: 2px solid lightgrey;
+  border-collapse: collapse;
+}
+
+.tableHead, .tableCell {
+  border: 1px solid lightgrey;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.rule {
+  border: 1px solid lightgrey;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
+.column50 {
+  width: 50%;
+  float: left;
+}
+
+.column20 {
+  width: 20%;
+  float: left;
+}
+
+.column80Right {
+  width: 80%;
+  float: right;
+}
+
+.column14 {
+  width: 14%;
+  float: left;
+}
+
+.width70 {
+  width: 70%;
+}
+
+.width20 {
+  width: 20%;
+}
+
+.width55 {
+  width: 55%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.height100px {
+  height: 100px;
+}
+
+.marginTop500 {
+  margin-top: 500px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.marginTop250 {
+  margin-top: 250px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.margin0 {
+  margin-top: 0%;
+  margin-right: 0%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+}
+
+.margin0auto {
+  margin-top: 0%;
+  margin-right: auto;
+  margin-bottom: 0%;
+  margin-left: auto;
+}
+
+.margin10 {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.review {
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.borderSecondary {
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: lightgrey;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #53a200;
+  cursor: pointer;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  height: 120px;
+  background-color: white;
+  padding: 10px;
+  border-bottom: 2px solid lightgrey;
+  z-index: 1;
+}
+
+.navbar .navbarLogo {
+  width: 130px;
+  float: left;
+}
+
+.navbar .navbarLinks {
+  margin-top: 40px;
+  margin-left: 140px;
+  position: absolute;
+}
+
+.navbar .navbarItem {
+  margin: 7px;
+  padding: 10px 15px;
+  color: #53a200;
+  font-family: "DM Sans", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: white;
+  font-size: 16px;
+}
+
+.navbar .navbarItem:hover {
+  cursor: pointer;
+  background-color: #53a200;
+  color: white;
+}
+
+.navbar .navbarLink {
+  border-radius: 5px;
+  float: left;
+}
+
+.navbar .navbarDropdown {
+  float: left;
+}
+
+.navbar .navbarDropdown:hover .navbarDropdownContent {
+  display: block;
+}
+
+.navbar .navbarDropdownBtn {
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  outline: none;
+}
+
+.navbar .navbarDropdownContent {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 250px;
+  -webkit-box-shadow: 3px 5px 15px black;
+          box-shadow: 3px 5px 15px black;
+  z-index: 1;
+  font-family: "DM Sans", sans-serif;
+  border: 2px solid #53a200;
+  border-radius: 5px;
+  margin-top: -10px;
+}
+
+.navbar .navbarDropdownLink {
+  color: #53a200;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar .navbarDropdownLink:hover {
+  color: white;
+  background-color: #53a200;
+}
+
+.navbar .navbarPrimaryBtn {
+  border: 2px solid #53a200;
+  border-radius: 5px;
+  background-color: #53a200;
+  color: white;
+  padding: 10px;
+  font-family: "DM Sans", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  top: 20px;
+}
+
+.navbar .navbarPrimaryBtn:hover {
+  background-color: white;
+  color: #53a200;
+}
+/*# sourceMappingURL=style.css.map */

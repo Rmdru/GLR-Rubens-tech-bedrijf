@@ -1,0 +1,415 @@
+//sass mixins
+//wrapper
+@mixin wrapper($width: 1000px, $paddingTop: 0px, $margin: 0 auto, $display: block) {
+    width: $width;
+    margin: $margin;
+    display: $display;
+    padding-top: $paddingTop;
+}
+
+//navbar
+@mixin navbar($width: 100%, $position: fixed, $height: 120px, $backgroundColor: $white, $padding: 10px, $borderBottom: 2px solid $secondaryColor, $zIndex: 1) {
+    width: $width;
+    position: $position;
+    height: $height;
+    background-color: $backgroundColor;
+    padding: $padding;
+    border-bottom: $borderBottom;
+    z-index: $zIndex;
+}
+
+@mixin navbarLogo ($width: 130px, $float: left) {
+    width: $width;
+    float: $float;
+}
+
+@mixin navbarLinks ($marginTop: 40px, $marginLeft: 140px, $position: absolute) {
+    margin-top: $marginTop;
+    margin-left: $marginLeft;
+    position: $position;
+}
+
+@mixin navbarItem ($margin: 7px, $padding: 10px 15px, $color: $primaryColor, $fontFamily: $primaryFont, $transition: 0.3s, $backgroundColor: $white, $fontSize: 16px) {
+    margin: $margin;
+    padding: $padding;
+    color: $color;
+    font-family: $fontFamily;
+    transition: $transition;
+    background-color: $backgroundColor;
+    font-size: $fontSize;
+}
+
+@mixin navbarItemHover ($cursor: pointer, $backgroundColor: $primaryColor, $color: $white) {
+    cursor: $cursor;
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+@mixin navbarLink ($borderRadius: 5px, $float: left) {
+    border-radius: $borderRadius;
+    float: $float;
+}
+
+@mixin navbarDropdown ($float: left) {
+    float: $float;
+}
+
+@mixin navbarDropdownHover ($display: block) {
+    display: $display;
+}
+
+@mixin navbarDropdownBtn ($borderRadius: 5px 5px 0px 0px, $border: none, $outline: none) {
+    border-radius: $borderRadius;
+    border: $border;
+    outline: $outline;
+}
+
+@mixin navbarDropdownContent($display: none, $position: absolute, $backgroundColor: white, $minWidth: 250px, $boxShadow: 3px 5px 15px black, $zIndex: 1, $fontFamily: $primaryFont, $border: 2px solid $primaryColor, $borderRadius: 5px, $marginTop: -10px) {
+    display: $display;
+    position: $position;
+    background-color: $backgroundColor;
+    min-width: $minWidth;
+    box-shadow: $boxShadow;
+    z-index: $zIndex;
+    font-family: $primaryFont;
+    border: $border;
+    border-radius: $borderRadius;
+    margin-top: $marginTop;
+}
+
+@mixin navbarDropdownLink ($color: $primaryColor, $padding: 10px 15px, $textDecoration: none, $display: block, $transition: 0.3s) {
+    color: $color;
+    padding: $padding;
+    text-decoration: $textDecoration;
+    display: $display;
+    transition: $transition;
+}
+
+@mixin navbarPrimaryBtn($border: 2px solid $primaryColor, $borderRadius: 5px, $backgroundColor: $primaryColor, $color: $white, $padding: 10px, $fontFamily: $primaryFont, $transition: 0.3s, $top: 20px, $position: relative) {
+    border: $border;
+    border-radius: $borderRadius;
+    background-color: $backgroundColor;
+    color: $color;
+    padding: $padding;
+    font-family: $fontFamily;
+    transition: $transition;
+    position: $position;
+    top: $top;
+}
+
+@mixin navbarPrimaryBtnHover($backgroundColor: $white, $color: $primaryColor) {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+@mixin navbarDropdownLinkHover ($color: $white, $backgroundColor: $primaryColor) {
+    color: $color;
+    background-color: $backgroundColor;
+}
+
+//aligning
+@mixin verticalCentered($verticalAlign: middle) {
+    vertical-align: $verticalAlign;
+}
+
+@mixin centerItem($margin: 0 auto, $display: block, $width: fit-content) {
+    margin: $margin;
+    display: $display;
+    width: $width;
+}
+
+@mixin txtAlign($txtAlign: center) {
+    text-align: $txtAlign;
+}
+
+@mixin alignLeft($marginLeft: 0px) {
+    margin-left: $marginLeft!important;
+}
+
+//btns
+@mixin btn($border: 2px solid $primaryColor, $borderRadius: 5px, $backgroundColor: $primaryColor, $color: $white, $padding: 10px 20px, $fontFamily: $primaryFont, $transition: 0.3s, $textDecoration: none, $cursor: pointer, $outline: none, $fontSize: 16px) {
+    border: $border;
+    border-radius: $borderRadius;
+    background-color: $backgroundColor;
+    color: $color;
+    padding: $padding;
+    font-family: $fontFamily;
+    transition: $transition;
+    text-decoration: $textDecoration;
+    cursor: $cursor;
+    outline: $outline;
+    font-size: $fontSize;
+}
+
+@mixin btnHover($backgroundColor: $transparent, $color: $primaryColor) {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+//link
+@mixin link($fontFamily: $secondaryFont, $fontSize: 16px, $color: inherit, $transition: 0.3s, $cursor: pointer) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $color;
+    transition: $transition;
+    cursor: $cursor;
+}
+
+@mixin linkHover($color: inherit) {
+    color: $color;
+}
+
+@mixin linkUnderline($textDecoration: underline) {
+    text-decoration: $textDecoration;
+}
+
+//title
+@mixin title($color: $primaryColor, $fontFamily: $primaryFont) {
+    color: $color;
+    font-family: $primaryFont;
+}
+
+//txt
+@mixin txt($color: $black, $fontFamily: $secondaryFont) {
+    color: $color!important;
+    font-family: $secondaryFont;
+}
+
+//sub title
+@mixin subTitle($color: $black, $fontFamily: $primaryFont) {
+    color: $color;
+    font-family: $primaryFont;
+}
+
+//promotionBanner
+@mixin promotionBanner($backgroundImg, $paddingTop: 200px, $height: 500px, $backgroundSize: contain, $backgroundPosition: center) {
+    background-image: $backgroundImg;
+    padding-top: $paddingTop;
+    height: $height;
+    background-size: $backgroundSize;
+    background-position: $backgroundPosition;
+}
+
+@mixin promotionBannerBlockBottomCenter($backgrounColor: $white, $border: 2px solid $primaryColor, $borderRadius: 5px, $margin: 0 auto, $marginTop: 340px, $padding: 30px, $width: 900px) {
+    background-color: $backgrounColor;
+    border: $border;
+    border-radius: $borderRadius;
+    margin: $margin;
+    margin-top: $marginTop;
+    padding: $padding;
+    width: $width;
+}
+
+//comparision column
+@mixin comparision($marginTop: 200px) {
+    margin-top: $marginTop;
+}
+
+@mixin comparisionColumn($float: left, $width: 206px, $margin: 10px, $border: 2px solid $secondaryColor, $borderRadius: 5px, $marginTop: 250px, $padding: 10px, $transition: 0.3s, $cursor: pointer) {
+    float: $float;
+    width: $width;
+    margin: $margin;
+    border: $border;
+    border-radius: $borderRadius;
+    padding: $padding;
+    transition: 0.3s;
+    cursor: $cursor;
+}
+
+@mixin comparisionColumnHover($box-shadow: 3px 5px 15px black) {
+    box-shadow: $box-shadow;
+}
+
+@mixin comparisionPopularTag($padding: 10px 15px, $backgroundColor: $primaryColor, $color: $white, $borderRadius: 5px) {
+    padding: $padding;
+    background-color: $backgroundColor;
+    color: $color!important;
+    border-radius: $borderRadius;
+}
+
+@mixin comparisionSpec($padding: 10px 15px, $borderBottom: 1px solid $secondaryColor, $borderTop: none, $margin: 0px) {
+    padding: $padding;
+    border-bottom: $borderBottom;
+    border-top: $borderTop;
+    margin: $margin;
+}
+
+@mixin comparisionBtn($margin: 10px auto) {
+    margin: $margin;
+}
+
+//promotionTiles
+@mixin promotionTiles($marginTop: 750px) {
+    margin-top: $marginTop;
+}
+
+//tiles
+@mixin tile($height: initial, $float: left, $width: 269.3px, $margin: 10px, $border: 2px solid $secondaryColor, $borderRadius: 5px, $marginTop: 250px, $padding: 20px, $transition: 0.3s, $cursor: pointer) {
+    height: $height;
+    float: $float;
+    width: $width;
+    margin: $margin;
+    border: $border;
+    border-radius: $borderRadius;
+    padding: $padding;
+    transition: 0.3s;
+    cursor: $cursor;
+}
+
+@mixin tileHover($box-shadow: 3px 5px 15px black) {
+    box-shadow: $box-shadow;
+}
+
+@mixin tileImg($maxHeight: 140px, $maxWidth: 100%, $width: initial) {
+    max-height: $maxHeight;
+    max-width: $maxWidth;
+    width: $width;
+}
+
+//form
+@mixin form($width: 100%, $margin: 0 auto, $marginTop: 20px, $padding: 15px, $border: 2px solid $secondaryColor, $borderRadius: 5px) {
+    width: $width;
+    margin: 0 auto;
+    margin-top: $marginTop;
+    padding: $padding;
+    border: $border;
+    border-radius: $borderRadius;
+}
+
+//input
+@mixin inputField($width: 80%, $margin: auto, $marginTop: 15px, $padding: 10px 15px, $border: 2px solid $secondaryColor, $borderRadius: 5px, $fontFamily: $primaryFont, $fontSize: 16px, $display: block, $outline: none, $transition: 0.3s, $resize: vertical) {
+    width: $width;
+    margin: 0 auto;
+    margin-top: $marginTop;
+    padding: $padding;
+    border: $border;
+    border-radius: $borderRadius;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    display: $display;
+    outline: $outline;
+    transition: $transition;
+    resize: $resize;
+}
+
+@mixin inputFieldFocus($borderColor: $primaryColor) {
+    border-color: $borderColor;
+}
+
+//checkbox
+@mixin checkboxContainer($paddingLeft: 80px, $display: block, $position: relative, $marginBottom: 12px, $cursor: pointer, $fontSize: 16px, $fontFamily: $secondaryFont, $userSelectWebkit: none, $userSelectMoz: none, $userSelectMs: none, $userSelect: none) {
+    padding-left: $paddingLeft;
+    display: $display;
+    position: $position;
+    margin-bottom: $marginBottom;
+    cursor: $cursor;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+	-webkit-user-select: $userSelectWebkit;
+	-moz-user-select: $userSelectMoz;
+	-ms-user-select: $userSelectMs;
+    user-select: $userSelect;
+}
+
+@mixin checkboxCheckmark($left: 40px,$position: absolute, $top: -5px, $height: 25px, $width: 25px, $backgroundColor: white, $border: 2px solid $primaryColor, $borderRadius: 5px) {
+    position: $position; 
+    left: $left;
+    top: $top;
+    height: $height;
+    width: $width;
+    background-color: $backgroundColor;
+    border: $border;
+    border-radius: $borderRadius;
+}
+
+//tabs
+@mixin tabs($overflow: hidden) {
+    overflow: $overflow;
+}
+
+@mixin tabLink ($backgroundColor: $white, $float: left, $border: 2px solid $primaryColor, $borderRadius: 5px 5px 0px 0px, $outline: none, $cursor: pointer, $padding: 10px 20px, $transition: 0.3s, $fontSize: 16px, $color: $primaryColor, $fontFamily: $primaryFont, $fontSize: 16px, $borderBottom: none) {
+    background-color: $backgroundColor;
+    float: $float;
+    border: $border;
+    border-radius: $borderRadius;
+    outline: $outline;
+    cursor: $cursor;
+    padding: $padding;
+    transition: $transition;
+    font-size: $fontSize;
+    color: $primaryColor;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    border-bottom: $borderBottom;
+}
+
+@mixin tabLinkHover ($backgroundColor: $primaryColor, $color: $white) {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+@mixin tabLinkActive ($backgroundColor: $primaryColor, $color: $white) {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+@mixin tabContent ($display: none, $padding: 20px, $border: 2px solid $primaryColor, $borderRadius: 0px 5px 5px 5px) {
+    display: $display;
+    padding: $padding;
+    border: $border;
+    border-radius: $borderRadius;
+}
+
+//rule
+@mixin rule($border: 1px solid $secondaryColor) {
+    border: $border;
+}
+
+//line through
+@mixin lineThrough($text-decoration: line-through) {
+    text-decoration: $text-decoration;
+}
+
+//column
+@mixin column($width: 50%, $float: left) {
+    width: $width;
+    float: $float;
+}
+
+//width
+@mixin width($width: 100%) {
+    width: $width;
+}
+
+//height
+@mixin height($height: 100%) {
+    height: $height;
+}
+
+//margin
+@mixin margin($marginTop: 0px, $marginRight: 0px, $marginBottom: 0px, $marginLeft: 0px) {
+    margin-top: $marginTop;
+    margin-right: $marginRight;
+    margin-bottom: $marginBottom;
+    margin-left: $marginLeft;
+}
+
+//display
+@mixin display($display: block) {
+    display: $display;
+}
+
+//review
+@mixin review($border: 2px solid $secondaryColor, $borderRadius: 5px, $padding: 10px 20px, $marginTop: 10px) {
+    border: $border;
+    border-radius: $borderRadius;
+    padding: $padding;
+    margin-top: $marginTop;
+}
+
+//border
+@mixin border($border: 2px solid $primaryColor, $borderRadius: 5px,  $padding: 15px) {
+    border: $border;
+    border-radius: $borderRadius;
+    padding: $padding;
+}
