@@ -50,14 +50,33 @@ require "includes/config.inc.php";
         ?>
         <title><?php echo $title; ?> - Ruben's tech bedrijf</title>
     </head>
-    <body onload="calculatePrice(1);loadReviews('<?php echo $uuidProduct; ?>', 0);">
+    <body onload="calculatePrice(1);loadReviews('<?php echo $uuidProduct; ?>', 0);loadFile('next');">
         <!--navbar-->
         <?php require "includes/navbar.inc.php"; ?>
         <div class="wrapperTop">
             <!--show product info-->
             <h1 class="title txtCenter"><?php echo $title; ?></h1>
             <div class="column50">
-                <img class="centerItem width70" src="img/product/<?php echo $uuidProduct; ?>.png" draggable="false" />
+                <!--image carousel-->
+                <?php
+                for ($i = 1;$i < 10;$i++) {
+                    $imgSrc = "img/product/{$uuidProduct}_{$i}.png";
+                    if (file_exists($imgSrc)) {
+                        echo "<img src='{$imgSrc}' class='centerItem width60 carouselImg' draggable='false' />";
+                        if ($i > 1) {
+                            $multipleImgs = 1;
+                        }
+                    }
+                }
+                if ($multipleImgs) {
+                    echo "<br /><div class='centerItem'>";
+                    ?>
+                        <button class="secondaryBtn" onclick="loadFile('previous');" id="previousBtn"><i class="material-icons verticalCentered">keyboard_arrow_left</i></button>
+                        <button class="secondaryBtn marginLeft20" onclick="loadFile('next');" id="nextBtn"><i class="material-icons verticalCentered">keyboard_arrow_right</i></button>
+                    <?php
+                    echo "</div>";
+                }
+                ?>
             </div>
             <div class="column50">
             <?php

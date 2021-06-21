@@ -1,5 +1,47 @@
 "use strict";
 
+//image carousel
+var i = -1;
+
+function loadFile(action) {
+	var files = document.querySelectorAll(".carouselImg");
+
+	if (action == "previous") {
+		i--;
+	} else {
+		i++;
+	}
+
+	files.forEach((file, i) => {
+		$(file).fadeOut();
+		file.removeAttribute("id");
+		setTimeout(loadNextFile, 400);
+	})
+
+	if (i === files.length) {
+		i = 0;
+	}
+
+    if (i < 1) {
+        document.getElementById("previousBtn").style.visibility = "hidden";
+    } else {
+        document.getElementById("previousBtn").style.visibility = "visible";
+    }
+
+    if (i === files.length - 1) {
+        document.getElementById("nextBtn").style.visibility = "hidden";
+    } else {
+        document.getElementById("nextBtn").style.visibility = "visible";
+    }
+	
+	function loadNextFile() {
+		$(files[i]).fadeIn();
+		files[i].id = "file";
+        document.getElementById("file").style.display = "block";
+	}
+}
+
+//shopping cart
 function addToCart(uuid) {
     $(document).ready(function (){
         var amount = $("#amount").val();
@@ -38,6 +80,7 @@ function refreshShoppingCartIcon() {
     })
 }
 
+//reviews
 function loadReviews(uuidProduct, status) {
     var xmlHttp = new XMLHttpRequest;
 

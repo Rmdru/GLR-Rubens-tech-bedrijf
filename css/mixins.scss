@@ -413,3 +413,8 @@
     border-radius: $borderRadius;
     padding: $padding;
 }
+
+//carousel
+@mixin carouselImg($display: none) {
+    display: $display;
+}

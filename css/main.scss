@@ -239,7 +239,7 @@ body {
     @include tabLinkHover();
 }
 
-.active {
+.tabLinkActive {
     @include tabLinkActive();
 }
 
@@ -291,6 +291,10 @@ body {
     @include width(70%);
 }
 
+.width60 {
+    @include width(60%);
+}
+
 .width20 {
     @include width(20%);
 }
@@ -313,6 +317,10 @@ body {
     @include margin(500px);
 }
 
+.marginTop550 {
+    @include margin(550px);
+}
+
 .marginTop250 {
     @include margin(250px);
 }
@@ -327,6 +335,10 @@ body {
 
 .margin10 {
     @include margin(10px, 10px, 10px, 10px);
+}
+
+.marginLeft20 {
+    @include margin(0px, 0px, 0px, 20px);
 }
 
 //display
@@ -362,4 +374,9 @@ body {
     border-radius: 50%;
     background: $primaryColor;
     cursor: pointer;
+}
+
+//carousel
+.carouselImg {
+    @include carouselImg();
 }

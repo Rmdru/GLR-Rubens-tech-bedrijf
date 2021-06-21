@@ -66,7 +66,7 @@ require "includes/config.inc.php";
                 <p class="txt txtCenter">Uw bericht:</p>
                 <textarea class="inputField" name="msg" rows="5"></textarea><br />
                 <button class="centerItem primaryBtn" type="submit">Verzenden</button>
-            </form>
+            </form><br />
         </div>
     </body>
 </html>

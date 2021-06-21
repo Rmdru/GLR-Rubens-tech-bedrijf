@@ -8,10 +8,10 @@ function openTab(evt, tabName) {
     }
     tabLink = document.getElementsByClassName("tabLink");
     for (i = 0; i < tabLink.length; i++) {
-        tabLink[i].className = tabLink[i].className.replace(" active", "");
+        tabLink[i].className = tabLink[i].className.replace(" tabLinkActive", "");
     }
     document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className += " tabLinkActive";
 }
 
 document.getElementById("defaultTab").click();

@@ -375,7 +375,7 @@ body {
   color: white;
 }
 
-.active {
+.tabLinkActive {
   background-color: #53a200;
   color: white;
 }
@@ -430,6 +430,10 @@ body {
   width: 70%;
 }
 
+.width60 {
+  width: 60%;
+}
+
 .width20 {
   width: 20%;
 }
@@ -448,6 +452,13 @@ body {
 
 .marginTop500 {
   margin-top: 500px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.marginTop550 {
+  margin-top: 550px;
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
@@ -479,6 +490,13 @@ body {
   margin-right: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
+}
+
+.marginLeft20 {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
 }
 
 .displayBlock {
@@ -515,6 +533,10 @@ body {
   border-radius: 50%;
   background: #53a200;
   cursor: pointer;
+}
+
+.carouselImg {
+  display: none;
 }
 
 .navbar {

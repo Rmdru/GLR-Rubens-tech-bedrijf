@@ -62,7 +62,7 @@ if ($stmtProduct = $dbh->prepare($sqlProduct)) {
                 $price = str_replace(".", ",", $price);
                 $discountPercent = $rowProduct['discountPercent'];
                 echo "<div class='tile tileHover'>";
-                    echo "<img class='tileImg centerItem' src='img/product/{$uuid}.png' draggable='false' />";
+                    echo "<img class='tileImg centerItem' src='img/product/{$uuid}_1.png' draggable='false' />";
                     echo "<h3 class='title txtCenter'>{$title}</h3>";
                     if ($discountPercent != 0) {
                         echo "<h4 class='subTitle txtCenter'><span class='lineThrough'>€{$oldPrice}</span> €{$price} <span class='txtColorRed'>-{$discountPercent}%</span></h4>";
