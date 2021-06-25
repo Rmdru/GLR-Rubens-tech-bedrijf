@@ -201,11 +201,11 @@ if ($errors == 0) {
                 header("location: ../index.php");
             }
         } else {
-            header("location: ../winkelwagen.php?placeOrderStatus=failed3");
+            header("location: ../winkelwagen.php?placeOrderStatus=failed");
         }
     } else {
-        header("location: ../winkelwagen.php?placeOrderStatus=failed2");
+        header("location: ../winkelwagen.php?placeOrderStatus=failed");
     }
 } else {
-    header("location: ../winkelwagen.php?placeOrderStatus=failed1");
+    header("location: ../winkelwagen.php?placeOrderStatus=failed");
 }

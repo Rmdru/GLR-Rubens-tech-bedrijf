@@ -49,7 +49,7 @@ if ($shoppingCart != 0) {
                     $subTotalPrice = str_replace(".", ",", $subTotalPrice);   
                     $totalPrice += $subTotalPrice;
                     echo "<tr>
-                        <td class='tableCell'><img class='height100px margin0auto displayBlock' src='img/product/{$uuidProduct}.png' draggable='false' /></td>
+                        <td class='tableCell'><img class='height100px margin0auto displayBlock' src='img/product/{$uuidProduct}_1.png' draggable='false' /></td>
                         <td class='tableCell txtCenter'><a class='link linkHoverColorGreen' href='product.php?uuid={$uuidProduct}'>{$title}</a></td>
                         <td class='tableCell txtCenter'>€{$subTotalPrice}</td>";
                         ?>

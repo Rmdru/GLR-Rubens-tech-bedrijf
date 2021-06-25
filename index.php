@@ -84,7 +84,7 @@ session_start();
             </div>
             <!--promotion tiles-->
             <div class="promotionTiles txtCenter">
-                <h1 class="title">Bij ons kiest u alleen voor hoge kwaliteit</h1>
+                <h1 class="title">Bij ons kies je alleen voor hoge kwaliteit</h1>
                 <div class="tile130 tileHover">
                     <i class="material-icons verticalCentered" style="font-size: 40px;">local_shipping</i><br />
                     <h3 class="subTitle">Altijd gratis bezorging</h3>
