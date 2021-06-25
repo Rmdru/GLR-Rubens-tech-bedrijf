@@ -31,6 +31,12 @@ if ($error == 0) {
         $stmt->execute();
     }
 
+    $sql = "DELETE FROM `Review` WHERE uuid = :uuid";
+    if ($stmt = $dbh->prepare($sql)) {
+        $stmt->bindParam(":uuid", $uuid);
+        $stmt->execute();
+    }
+
     //remove sessions
     unset($_SESSION['uuid']);
     unset($_SESSION['ipAddress']);
