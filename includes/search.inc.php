@@ -43,8 +43,10 @@ if ($errors == 0) {
                         $uuid = $row['uuid'];
                         $oldPrice = $row['oldPrice'];
                         $oldPrice = round($oldPrice, 2);
+                        $oldPrice = str_replace(".", ",", $oldPrice);
                         $price = $row['price'];
                         $price = round($price, 2);
+                        $price = str_replace(".", ",", $price);
                         $discountPercent = $row['discountPercent'];
                         $title = $row['title'];
                         echo "<tr><td class='tableCell'><img class='height100px margin0auto displayBlock' src='img/product/{$uuid}_1.png' draggable='false' /></td>
@@ -52,7 +54,6 @@ if ($errors == 0) {
                         if ($discountPercent != 0) {
                             echo "<td class='tableCell'><h4 class='subTitle txtCenter'><span class='lineThrough'>€{$oldPrice}</span> €{$price} <span class='txtColorRed'>-{$discountPercent}%</span></h4></td>";
                         } else {
-                            $price = str_replace(".", ",", $price);
                             echo "<td class='tableCell'><h4 class='subTitle txtCenter'>€{$price}</h4></td>";
                         }
                         echo "<td class='tableCell'><a href='product?uuid={$uuid}' class='primaryBtn centerItem'>Bekijk dit product</a></td>";
